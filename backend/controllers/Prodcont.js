@@ -26,7 +26,7 @@ module.exports.addproduct=(req,resp)=>{
 module.exports.editproduct=(req,resp)=>{
     const{title, description, price}=req.body
     const {id}=req.params
-    product.findByIdAndUpdate(id,{$set:title, description, price})
+    product.findByIdAndUpdate(id,{title, description, price})
     .then(()=>{return resp.status(200).json({msg:"product updated"})})
     .catch((e)=>{return resp.status(404).json({msg:e.message})})
 }

@@ -26,8 +26,8 @@ const Home = () => {
         <h1>ID: {el._id}</h1>
         <p>Title: {el.title}</p>
         <button onClick={()=>{deleteproduct(el._id)}}>Delete</button>
-        <button>Edit</button>
-        <button >See more</button>
+        <button onClick={()=>{nav("/edit/"+el._id)}}>Edit</button>
+        <button onClick={()=>{nav("/product/"+el._id)}}>See more</button>
 
         </div>
         
