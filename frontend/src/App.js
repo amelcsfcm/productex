@@ -1,11 +1,12 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Add from "./pages/Add";
 import Edit from "./pages/Edit";
 import Productbyid from "./pages/Productbyid";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Notfound from "./pages/Notfound";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
               <Route path="/add" element={<Add />} />
               <Route path="/edit/:id" element={<Edit />} />
               <Route path="/product/:id" element={<Productbyid />} />
+              <Route path="*" element={<Notfound />} />
             </>
           ) : (
             <>
